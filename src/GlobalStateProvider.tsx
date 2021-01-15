@@ -1,4 +1,10 @@
-import React, { createContext, useState, useContext, Dispatch, SetStateAction } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 export interface GlobalStateInterface {
   firstname: string;
@@ -11,13 +17,15 @@ const GlobalStateContext = createContext({
   setState: {} as Dispatch<SetStateAction<Partial<GlobalStateInterface>>>,
 });
 
+interface GlobalStateProviderInterface {
+  children: React.ReactNode;
+  value?: Partial<GlobalStateInterface>;
+}
+
 const GlobalStateProvider = ({
   children,
   value = {} as GlobalStateInterface,
-}: {
-  children: React.ReactNode;
-  value?: Partial<GlobalStateInterface>;
-}) => {
+}: GlobalStateProviderInterface) => {
   const [state, setState] = useState(value);
   return (
     <GlobalStateContext.Provider value={{ state, setState }}>

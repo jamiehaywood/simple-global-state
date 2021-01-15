@@ -19,6 +19,7 @@ const PageOne = () => {
   return (
     <PageContainer>
       <h1>PAGE ONE</h1>
+      <p>Enter your global state below</p>
 
       <form onSubmit={handleSubmit(submitFunction)}>
         <Box mb={1}>
@@ -58,7 +59,7 @@ const PageOne = () => {
           />
         </Box>
         <Button variant="contained" color="primary" type="submit">
-          Next Page
+          View global state on next page
         </Button>
       </form>
     </PageContainer>
