@@ -1,10 +1,17 @@
 # Typesafe Global State with TypeScript, React & React Context
-
 ## Original article [on Medium](https://jamiehaywood.medium.com/typesafe-global-state-with-typescript-react-react-context-c2df743f3ce)
+![](https://cdn-images-1.medium.com/max/1600/1*9McBI5ee2rTtUBRVoLQpCA.png)
+
+
+## Before we begin
+This is **_not_** a replacement for a heavy weight state management tool like MobX or Redux. The intended use case is for:
+- Apps that need global state (bigger than drilling `useState()`) but smaller than `MobX` or `Redux`.
+- Apps that have low frequency updates.
+- Teams that need a low barrier to entry for state management.
 
 <br>
 
-![](https://cdn-images-1.medium.com/max/1600/1*9McBI5ee2rTtUBRVoLQpCA.png)
+
 
 For the purposes of this overview, all the code relating to our global state sits in a single file called `GlobalStateProvider.tsx`. You probably could abstract the code into multiple files / folders that better fit your structure.
 
