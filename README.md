@@ -12,6 +12,7 @@ This is **_not_** a replacement for a heavy weight state management tool like Mo
 <br>
 
 
+## Guide
 
 For the purposes of this overview, all the code relating to our global state sits in a single file called `GlobalStateProvider.tsx`. You probably could abstract the code into multiple files / folders that better fit your structure.
 
